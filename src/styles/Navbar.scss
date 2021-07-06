@@ -1,0 +1,125 @@
+.navbar {
+  &__links {
+  }
+
+  &__link {
+    text-decoration: none;
+  }
+
+  &__authBtn {
+    button {
+      border: none;
+      width: 200px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #fff;
+      cursor: pointer;
+      margin: 20px;
+      height: 55px;
+      text-align: center;
+      border: none;
+      background-size: 300% 100%;
+
+      border-radius: 50px;
+      -o-transition: all 0.4s ease-in-out;
+      -webkit-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+      background-image: linear-gradient(
+        to right,
+        #2fabe0,
+        #4481eb,
+        #04befe,
+        #3f86ed
+      );
+      box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+      &:hover {
+        background-position: 100% 0;
+        -o-transition: all 0.4s ease-in-out;
+        -webkit-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
+      }
+    }
+  }
+
+  &__content {
+    width: 50px;
+  }
+
+  &__name {
+    font-size: 28px;
+    margin-left: 20px;
+  }
+
+  &__toggle {
+    background-color: transparent;
+    border: none;
+    transform: translate(15px, 15px);
+  }
+
+  &__toggle-component {
+    position: fixed;
+  }
+}
+
+.navbar-closed {
+  position: fixed;
+  width: 300px;
+  height: 100vh;
+}
+
+.navbar-open {
+  position: fixed;
+  width: 250px;
+  height: 100vh;
+  border-radius: 20px;
+  background: white;
+}
+
+@media all and (max-width: 600px) {
+  .navbar-open {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 20px;
+    background: white;
+    z-index: 1;
+    border-radius: 0px;
+  }
+
+  .navbar-closed {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    z-index: 1;
+  }
+
+  .navbar {
+    &__openModal {
+      font-size: 62px;
+      color: #04befe;
+      transform: translate(100px, -65px);
+    }
+    &__home {
+      font-size: 62px;
+      color: #04befe;
+      transform: translate(150px, -69px);
+    }
+    &__content {
+      width: 300px;
+    }
+
+    &__name {
+      width: 50px;
+    }
+
+    &__toggle {
+      transform: translate(3px, 15px);
+    }
+
+    &__authBtn {
+      button {
+        transform: translate(64px, 219px);
+      }
+    }
+  }
+}

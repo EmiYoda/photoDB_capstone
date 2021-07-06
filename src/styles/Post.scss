@@ -1,0 +1,195 @@
+.post {
+  &__like {
+    color: white;
+    font-size: 18px;
+  }
+
+  &__liked {
+    color: $semi-light-blue;
+    font-size: 18px;
+  }
+
+  &__like-disabled {
+    font-size: 18px;
+  }
+
+  &__like-container {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  &__like-btn {
+    text-align: center;
+    font-size: 18px;
+    background: none;
+    border: none;
+    color: white;
+
+    &:active {
+      color: $semi-light-blue;
+    }
+  }
+  &__like-text {
+    font-size: 18px;
+  }
+}
+
+.wrapper {
+  transform: translate(-579px, 20px);
+  width: 500px;
+  height: 100%;
+  float: right;
+}
+
+.grid {
+  padding: 60px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.grid--item {
+  position: relative;
+  border-radius: 40px;
+  margin-bottom: 30px;
+  width: 500px;
+  min-width: 200px;
+  transition: all 0.5s;
+  box-shadow: 0 4px 60px 0 rgba(65, 132, 234, 0.75);
+
+  overflow: hidden;
+
+  &:before {
+    display: block;
+    padding-top: 112.5%;
+    content: "";
+  }
+}
+
+.img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  background-position: center center;
+  background-size: cover;
+
+  overflow: hidden;
+
+  &:before,
+  &:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    content: "";
+    opacity: 0;
+    transition: opacity 0.5s;
+  }
+
+  &:before {
+    background: rgba(purple, 0.25);
+  }
+
+  &:after {
+    background: linear-gradient(
+      to top,
+      transparent,
+      rgba(black, 0.5),
+      transparent
+    );
+  }
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+
+  opacity: 0;
+  text-align: center;
+  color: white;
+  will-change: transform;
+  backface-visibility: hidden;
+  transform: translate(-50%, -50%) scale(0.9);
+  transition: all 0.5s;
+}
+
+h1,
+h2 {
+  font-weight: 300;
+}
+
+h1 {
+  margin-top: 90px;
+  text-align: center;
+  font-size: 56px;
+  color: #242424;
+}
+
+h2 {
+  font-size: 32px;
+
+  &:before,
+  &:after {
+    display: inline-block;
+    margin: 0 0.5em;
+    width: 0.75em;
+    height: 0.03em;
+    content: "";
+    vertical-align: middle;
+    transition: all 0.3s;
+  }
+}
+
+h5 {
+  letter-spacing: 0.1em;
+  margin-bottom: 30px;
+}
+
+.desc {
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+  line-height: 1.5;
+}
+.desc2 {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  letter-spacing: 0.1em;
+}
+
+.grid--item:hover {
+  .img:before,
+  .img:after,
+  .container {
+    opacity: 1;
+  }
+
+  .container {
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+@media all and (max-width: 600px) {
+  .wrapper {
+    transform: translate(0, 0);
+    float: none;
+    width: 500px;
+    height: 100%;
+  }
+
+  .grid--item {
+    position: relative;
+    border-radius: 40px;
+    margin-bottom: 20px;
+    width: 350px;
+    min-width: 200px;
+    transition: all 0.5s;
+    overflow: hidden;
+    transform: translate(13px, 60px);
+  }
+}

@@ -1,0 +1,122 @@
+//* Variables
+//* Variables
+
+$dark-blue: #023e8a;
+$semi-dark-blue: #0077b6;
+$light-blue: #56bcf7;
+$semi-light-blue: #0096c7;
+$secondary-semi-dark-blue: #0c6c8b;
+$secondary-dark-blue: #1b67a1;
+$primary-gray: #394a56;
+$secondary-gray: #1b1b1b;
+$primary-white: #ffff;
+$secondary-white: #f1f1f1;
+$primary-black: #000;
+$shadow-blue: #0eb9f1;
+$second-shadow-blue: #0961ee;
+$google-blue: #4285f4;
+$button-active-blue: #1669f2;
+$box-shadow-gray: #545454;
+
+body {
+  background: url("../images/background2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+}
+#root {
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+}
+* {
+  box-sizing: border-box;
+  font-family: "Roboto Mono", monospace;
+}
+
+@media all and (max-width: 600px) {
+  .home {
+    width: 600px;
+  }
+}
+
+.home {
+  &__authBtn {
+    button {
+      border: none;
+      width: 200px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #fff;
+      cursor: pointer;
+      margin: 20px;
+      height: 55px;
+      text-align: center;
+      border: none;
+      background-size: 300% 100%;
+
+      border-radius: 50px;
+      -o-transition: all 0.4s ease-in-out;
+      -webkit-transition: all 0.4s ease-in-out;
+      transition: all 0.4s ease-in-out;
+      background-image: linear-gradient(
+        to right,
+        #2fabe0,
+        #4481eb,
+        #04befe,
+        #3f86ed
+      );
+      box-shadow: 0 4px 15px 0 rgba(65, 132, 234, 0.75);
+      &:hover {
+        background-position: 100% 0;
+        -o-transition: all 0.4s ease-in-out;
+        -webkit-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
+      }
+    }
+  }
+
+  &__content {
+    position: fixed;
+    width: 50px;
+    color: white;
+  }
+
+  &__name {
+    font-size: 28px;
+    margin-left: 20px;
+  }
+}
+
+.openModal {
+  color: $shadow-blue;
+  transform: translate(138px, 300px);
+  font-size: 80px;
+  float: right;
+  margin-right: 30px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.paper {
+  background-color: $primary-white;
+  border: 2px solid $primary-black;
+  box-shadow: 5px 5px 25px 14px rgba(0, 0, 0, 0.158);
+  padding: 2px 4px 3px;
+}
+
+//* Imports
+@import "./Auth.scss";
+@import "./ImageGrid.scss";
+@import "./PostsForm.scss";
+@import "./Post.scss";
+@import "./Navbar.scss";
+@import "./SearchBar.scss";
+@import "./PostDetails.scss";

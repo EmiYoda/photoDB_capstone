@@ -1,0 +1,25 @@
+.postDetails {
+  &__container {
+    display: flex;
+    justify-content: center;
+  }
+  &__content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__img {
+    width: 700px;
+    border-radius: 50px;
+    margin-top: 20px;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .postDetails {
+    &__img {
+      width: 400px;
+    }
+  }
+}
