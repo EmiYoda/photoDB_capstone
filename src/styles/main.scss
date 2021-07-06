@@ -19,10 +19,7 @@ $button-active-blue: #1669f2;
 $box-shadow-gray: #545454;
 
 body {
-  background: url("../images/background2.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-color: $semi-light-blue;
   margin: 0;
 }
 #root {
